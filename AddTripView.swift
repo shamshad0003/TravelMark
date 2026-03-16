@@ -82,8 +82,8 @@ struct AddTripView: View {
             }
             .padding()
             .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.secondary.opacity(0.5)))
-            .onChange(of: viewModel.startDate) { viewModel.validateDates() }
-            .onChange(of: viewModel.endDate) { viewModel.validateDates() }
+            .onChange(of: viewModel.startDate) { _ in viewModel.validateDates() }
+            .onChange(of: viewModel.endDate) { _ in viewModel.validateDates() }
 
             if viewModel.dateError {
                 Text("End Date should be after Start Date.")

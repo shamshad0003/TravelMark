@@ -10,6 +10,8 @@ class AddTripViewModel: ObservableObject {
     @Published var notes: String = ""
     @Published var selectedMood: String = "✈️"
     
+    let moods = ["✈️", "🏖️", "🏔️", "🏙️", "🏕️"]
+    
     @Published var titleError: Bool = false
     @Published var locationError: Bool = false
     @Published var dateError: Bool = false
