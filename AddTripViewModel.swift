@@ -1,5 +1,6 @@
 import SwiftUI
 import CoreData
+import Combine
 
 class AddTripViewModel: ObservableObject {
     @Published var title: String = ""

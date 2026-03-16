@@ -1,5 +1,6 @@
 import SwiftUI
 import CoreData
+import Combine
 
 class InsightsViewModel: ObservableObject {
     @Published var trips: [TripEntity] = []

@@ -1,12 +1,6 @@
-//
-//  ContentView.swift
-//  TravelMark_shamshad
-//
-//  Created by Shamshad on 2025-09-24.
-//
-
 import SwiftUI
 import CoreData
+import Combine
 
 struct HomeView: View {
     
@@ -121,6 +115,21 @@ struct HomeView: View {
         .frame(maxWidth: .infinity)
         .padding(.vertical, 60)
     }
+
+    private var insightsButton: some View {
+        NavigationLink(destination: TravelInsightsView()) {
+            HStack {
+                Image(systemName: "chart.bar.fill")
+                Text("View Travel Insights")
+            }
+            .font(.headline)
+            .frame(maxWidth: .infinity)
+            .padding()
+            .background(DesignSystem.Colors.primary.opacity(0.1))
+            .foregroundStyle(DesignSystem.Colors.primary)
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+        }
+    }
     
     private var tripListSection: some View {
         LazyVStack(spacing: 16) {
@@ -144,7 +153,7 @@ struct HomeView: View {
                                         .foregroundStyle(.red)
                                         .font(.caption)
                                 }
-                            }
+                             }
                             
                             HStack {
                                 Image(systemName: "mappin.and.ellipse")
@@ -183,13 +192,6 @@ struct HomeView: View {
                     }
                 }
             }
-        }
-    }
-
-    private func deleteTrips(offsets: IndexSet) {
-        withAnimation {
-            let tripsToDelete = offsets.map { sortedTrips[$0] }
-            tripsToDelete.forEach(viewModel.deleteTrip)
         }
     }
 }
