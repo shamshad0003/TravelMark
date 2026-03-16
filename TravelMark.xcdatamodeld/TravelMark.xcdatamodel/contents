@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedVersion="1" userDefinedModelVersion="1" systemVersion="11D50">
+    <entity name="TripEntity" representedClassName="TripEntity" syncable="YES">
+        <attribute name="endDate" optional="NO" attributeType="Date"/>
+        <attribute name="isFavorite" optional="NO" attributeType="Boolean" defaultValueString="NO"/>
+        <attribute name="location" optional="NO" attributeType="String"/>
+        <attribute name="mood" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="startDate" optional="NO" attributeType="Date"/>
+        <attribute name="title" optional="NO" attributeType="String"/>
+    </entity>
+</model>
